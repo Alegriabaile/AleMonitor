@@ -1,0 +1,6 @@
+.vs
+x64
+electron
+*.VC.db
+*.VC.VC.opendb
+*/Release/*
