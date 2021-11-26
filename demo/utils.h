@@ -7,7 +7,7 @@ quint64 getProcessID(const QProcess* proc)
 #ifdef WIN64
     struct _PROCESS_INFORMATION* procinfo = proc->pid();
     return procinfo->dwProcessId;
-#else // Linux
+#else
     return proc->pid();
-#endif // Q_WS_WIN
+#endif
 }
