@@ -31,6 +31,9 @@
     <ClCompile Include="Release\moc_ProcessManager.cpp">
       <Filter>MocFiles</Filter>
     </ClCompile>
+    <ClCompile Include="WSServerManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ProcessManager.h">
@@ -41,5 +44,10 @@
     <ClInclude Include="utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="WSServerManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

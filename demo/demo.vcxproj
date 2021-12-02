@@ -25,6 +25,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
@@ -61,7 +62,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
-      <AdditionalDependencies>Qt5Core.lib;qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Qt5Core.lib;Qt5WebSockets.lib;Qt5Network.lib;qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\Qt\5.12.4\msvc2015_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -100,6 +101,7 @@
     </ClCompile>
     <ClCompile Include="ProcessManager.cpp" />
     <ClCompile Include="Release\moc_ProcessManager.cpp" />
+    <ClCompile Include="WSServerManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="ProcessManager.h">
@@ -111,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />
+    <QtMoc Include="WSServerManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
